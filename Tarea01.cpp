@@ -12,6 +12,7 @@
 #include <time.h>
 #include <math.h>
 #include <cstdlib>
+#include "utils.h"
 
 #define Largo 200
 #define _TIME_
@@ -70,75 +71,6 @@ void Fvalidacion(char *Ini, char *Ter)
        exit(0);
     };
     cout<<"Fechas Reconocidas..."<<endl;
-}
-
-//FUNCIÓN QUE GENERA NOMBRE DE  MES DEPENDIENDO EL NUMERO INGRESADO EN LA FECHA PARA MOSTRARLO EN EL GRAFICO
-char* NombreMes(int NumMes) 
-{
-    char* NomMes = NULL;
-    NomMes = (char *) calloc(65, sizeof (char *));
-    if (NumMes == 1) 
-    {
-        strcpy(NomMes, "Enero");
-        return NomMes;
-    } else if (NumMes == 2) 
-    {
-        strcpy(NomMes, "Febrero");
-        return NomMes;
-    } else if (NumMes == 3) 
-    {
-        strcpy(NomMes, "Marzo");
-        return NomMes;
-    } else if (NumMes == 4) 
-    {
-        strcpy(NomMes, "Abril");
-        return NomMes;
-    } else if (NumMes == 5) 
-    {
-        strcpy(NomMes, "Mayo");
-        return NomMes;
-    } else if (NumMes == 6) 
-    {
-        strcpy(NomMes, "Junio");
-        return NomMes;
-    } else if (NumMes == 7) 
-    {
-        strcpy(NomMes, "Julio");
-        return NomMes;
-    } else if (NumMes == 8) 
-    {
-        strcpy(NomMes, "Agosto");
-        return NomMes;
-    } else if (NumMes == 9) 
-    {
-        strcpy(NomMes, "Septiembre");
-        return NomMes;
-    } else if (NumMes == 10) 
-    {
-        strcpy(NomMes, "Octubre");
-        return NomMes;
-    } else if (NumMes == 11) 
-    {
-        strcpy(NomMes, "Noviembre");
-        return NomMes;
-    } else if (NumMes == 12) 
-    {
-        strcpy(NomMes, "Diciembre");
-        return NomMes;
-    } else 
-    {
-        strcpy(NomMes, "");
-        return NomMes;
-    }
-}
-
-// FUNCIÓN QUE TRANSFORMA EL NUMERO A UN CARACTER
-char* Trans(long NumMes) 
-{
-    char* caracter = NULL;
-    caracter = (char *) calloc(65, sizeof (char *));
-    snprintf(caracter, 64, "%ld", NumMes);
-    return caracter;
 }
 
 //FUNCION QUE LIMPIA EL ARREGLO DE CONSULTAS
